@@ -12,9 +12,9 @@ class Metadata(BaseModel):
     PageCount: Union[int, str]  # Can be "Not Available"
     SentimentTone: str
     
-class ChangeFormat(BaseModel):
-    Page: str
-    changes: str
+# class ChangeFormat(BaseModel):
+#     Page: str
+#     changes: str
     
-class SummaryResponse(RootModel[list[ChangeFormat]]):
-    pass
+# class SummaryResponse(RootModel[list[ChangeFormat]]):
+#     pass
