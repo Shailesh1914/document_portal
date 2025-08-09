@@ -42,9 +42,12 @@ class DocumentIngestor:
             raise DocumentPortalException("Initialization error in DocumentIngestor", sys)
             
     
-    def ingest_files(self):
+    def ingest_files(self, uploaded_files):
         try:
-            pass
+            documents = []
+            for uploaded_file in uploaded_files
+            
+            
         except Exception as e:
             self.log.error("Failed to ingest files", error=str(e))
             raise DocumentPortalException("Ingestion error in DocumentIngestor", sys)

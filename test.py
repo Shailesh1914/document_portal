@@ -45,7 +45,9 @@
 #     main()
 
 
-## Testing code for document comparison using LLMs
+
+
+# Testing code for document comparison using LLMs
 
 import io
 from pathlib import Path
@@ -58,8 +60,8 @@ def load_fake_uploaded_file(file_path: Path):
 
 # ---- Step 1: Save and combine PDFs ---- #
 def test_compare_documents():
-    ref_path = Path("E:\\LLMOPS_Test\\document_portal\\data\document_compare\\Long_Report_V1.pdf")
-    act_path = Path("E:\\LLMOPS_Test\\document_portal\\data\document_compare\\Long_Report_V2.pdf")
+    ref_path = Path("E:\\LLMOPS_Test\\document_portal\\data\\document_compare\\Long_Report_V1.pdf")
+    act_path = Path("E:\\LLMOPS_Test\\document_portal\\data\\document_compare\\Long_Report_V2.pdf")
 
     # Wrap them like Streamlit UploadedFile-style
     class FakeUpload:
@@ -78,7 +80,7 @@ def test_compare_documents():
     # Save files and combine
     ref_file, act_file = comparator.save_uploaded_files(ref_upload, act_upload)
     combined_text = comparator.combine_documents()
-    comparator.clean_old_session(keep_latest=3)
+    comparator.clean_old_sessions(keep_latest=3)
 
     print("\n Combined Text Preview (First 1000 chars):\n")
     print(combined_text[:1000])
@@ -92,4 +94,3 @@ def test_compare_documents():
 
 if __name__ == "__main__":
     test_compare_documents()
-    
