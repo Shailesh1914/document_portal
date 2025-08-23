@@ -8,3 +8,5 @@ logs/
 data/
 #test.py
 faiss_index/
+main_archive/
+archive
